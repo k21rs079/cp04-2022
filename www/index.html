@@ -38,6 +38,12 @@
         $('#btnC').click(function(e) {
             btnCClick(e);
         });
+
+        $('#btnD').click(function(e) {
+            btnDClick(e);
+        });
+
+
         init();
     });
     
@@ -161,6 +167,8 @@
         $('#btnA').prop('disabled', false);
         $('#btnB').prop('disabled', false);
         $('#btnC').prop('disabled', false);
+        $('#btnD').prop('disabled', false);
+
         
     }
 
@@ -207,6 +215,15 @@
 
         
     }
+
+     // ButtonDがクリックされた時の処理
+    function btnDClick(e){
+        alarm();
+        $("#time").html("単位欲しくないの？！？！");
+        $("#remain").html("今日も学校頑張ろう！");
+        
+        
+    }
     
  
     // 繰り返し実行する処理
@@ -239,7 +256,8 @@
     <div id="time">Time</div>
     <button id="btnA">Start</button>  
     <button id="btnB">Stop</button>  
-    <button id="btnC">Set</button>  
+    <button id="btnC">Set</button> 
+    <button id="btnD">Set</button> 
     <input type="number" id="minute" value=0 >
     <input type="number" id="second" value=15 >
 </body>
